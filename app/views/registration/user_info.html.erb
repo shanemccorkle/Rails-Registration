@@ -1,14 +1,17 @@
 <h1>Hello <%= @user.firstname %>!</h1>
 <p>
-  First Name: <%= @user.firstname %>
-  Last Name: <%= @user.lastname %>
-
-  <% @user.phones.each do |x| %>
-  <%= x.phonenumber %>
-  <% end %>
-
-  Username: <%= @user.username %>
-  Password: <%= @user.password %>
-</br>
+  First Name: <%= @user.firstname %><br/>
+  Last Name: <%= @user.lastname %><br/>
+  <ul>
+    <% @user.phones.each do |x| %>
+    <li>Phone: <%= x.phonenumber %></li>
+    <% end %>
+  </ul></br>
+  Username: <%= @user.username %><br/>
+  Password: <%= @user.password %><br/>
   User Id: <%= @user.id %>
+</p>
+
+<p>
+  <a href="/registration/login">Login</a>
 </p>

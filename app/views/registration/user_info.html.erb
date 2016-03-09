@@ -2,11 +2,11 @@
 <p>
   First Name: <%= @user.firstname %><br/>
   Last Name: <%= @user.lastname %><br/>
-  Last Name: <%= @user.streetaddr %><br/>
-  Last Name: <%= @user.city %><br/>
-  Last Name: <%= @user.state %><br/>
-  Last Name: <%= @user.zipcode %><br/>
-  Last Name: <%= @user.country %><br/>
+  Street Address: <%= @user.streetaddr %><br/>
+  City: <%= @user.city %><br/>
+  State: <%= @user.state %><br/>
+  Zipcode: <%= @user.zipcode %><br/>
+  Country: <%= @user.country %><br/>
   <ul>
     <% @user.phones.each do |x| %>
     <li>Phone: <%= x.phonenumber %></li>
@@ -17,6 +17,6 @@
   User Id: <%= @user.id %>
 </p>
 
-<button><a style = "text-decoration: none; color: black" href="/registration/login">Login</a></button>
+<a class="btn btn-info" href="/registration/login">Login</a>
 
-<button><a style = "text-decoration: none; color: black" href="/registration/logout">Log Out</a></button>
+<a class="btn btn-info" href="/registration/logout">Log Out</a>

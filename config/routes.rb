@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'registration/logout'
+
   post 'registration/login_user'
 
   get 'registration/login'

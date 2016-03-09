@@ -1,5 +1,6 @@
 <h1>Login</h1>
 
+<h3><%= flash[:notice] %></h3>
 <form action="/registration/login_user" method="post">
   <label for="username">User Name: </label>
   <input type="text" name="username" id="username" required/><br/>
@@ -7,3 +8,7 @@
   <input type="text" name="password" id="password" required/><br/>
   <input type="submit" value="Login"/>
 </form>
+
+<button><a style = "text-decoration: none; color: black" href="/">Register</a></button>
+
+<h3><%= flash[:alert] %></h3>

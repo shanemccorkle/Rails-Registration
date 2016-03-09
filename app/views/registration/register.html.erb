@@ -1,5 +1,7 @@
 <h1>Registration Page</h1>
 
+<h3><%= flash[:notice] %></h3>
+
 <form action="/registration/register_user" method="post">
   <label for="firstname">First Name: </label>
   <input type="text" name="firstname" id="firstname"/></br>
@@ -28,3 +30,5 @@
   <input type="text" name="password" id="password" required/><br/>
   <input type="submit" value="Register"/>
 </form>
+
+<button><a style = "text-decoration: none; color: black" href="/registration/login">Go To Login</a></button>

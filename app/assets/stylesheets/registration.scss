@@ -1,3 +1,139 @@
 // Place all the styles related to the registration controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// @import "compass/css3";
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+
+/* zocial */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Maven Pro', sans-serif;
+
+}
+
+$bg: #4f6d82;
+$form: #2c3e50;
+$presufix: #dedee0;
+$presufixFont : #777777;
+
+
+
+body {
+  background: $bg;
+}
+
+h2 {
+  color:#95a5a6;
+  margin-left:20px;
+  font-size:30px;
+  margin-top: -10px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+.formCont {
+  width: 400px;
+  margin: 50px auto;
+}
+
+form{
+  background: $form;
+  padding: 20px;
+}
+
+input {
+  border: 0;
+  padding: 10px;
+}
+
+input:focus {
+  outline-color: rgba(0,0,0,0);
+}
+
+.inputForm {
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  overflow:hidden;
+  margin-bottom: 5px;
+}
+
+.prefix {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 100%;
+  padding: 10px;
+  background: $presufix;
+  text-align: center;
+  color: $presufixFont;
+}
+
+.sufix {
+  display: inline-block;
+  position: relative;
+  float:right;
+  width: 50px;
+  height: 100%;
+  padding: 10px;
+  background: $presufix;
+  text-align: center;
+  color: $presufixFont;
+}
+
+.brTop {
+  border-radius: 3px 3px 0px 0px;
+  height: 5px;
+  background: #16a085;
+  background: -moz-linear-gradient(-45deg,  #16a085 0%, #1abc9c 40%, #2980b9 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#16a085), color-stop(40%,#1abc9c), color-stop(100%,#2980b9));
+  background: -webkit-linear-gradient(-45deg,  #16a085 0%,#1abc9c 40%,#2980b9 100%);
+  background: -o-linear-gradient(-45deg,  #16a085 0%,#1abc9c 40%,#2980b9 100%);
+  background: -ms-linear-gradient(-45deg,  #16a085 0%,#1abc9c 40%,#2980b9 100%);
+  background: linear-gradient(135deg,  #16a085 0%,#1abc9c 40%,#2980b9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16a085', endColorstr='#2980b9',GradientType=1 );
+
+}
+
+/*
+.brTop {
+  height: 8px;
+  background: #c4e17f;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+*/
+
+.triangle {
+  position: relative;
+  top: -21px;
+  left: 50px;
+  margin: 0;
+  height: 0;
+  width: 0;
+  border-top:15px solid $form;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid transparent;
+  transform: rotate(225deg);
+}
+
+.flRight {
+  float:right;
+  margin-right: 25px;
+  text-decoration:underline;
+  color:#95a5a6;
+}

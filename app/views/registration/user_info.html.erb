@@ -1,22 +1,29 @@
-<h1>Hello <%= @user.firstname %>!</h1>
-<p>
-  First Name: <%= @user.firstname %><br/>
-  Last Name: <%= @user.lastname %><br/>
-  Street Address: <%= @user.streetaddr %><br/>
-  City: <%= @user.city %><br/>
-  State: <%= @user.state %><br/>
-  Zipcode: <%= @user.zipcode %><br/>
-  Country: <%= @user.country %><br/>
-  <ul>
-    <% @user.phones.each do |x| %>
-    <li>Phone: <%= x.phonenumber %></li>
-    <% end %>
-  </ul></br>
-  Username: <%= @user.username %><br/>
-  Password: ***********<br/>
-  User Id: <%= @user.id %>
-</p>
+<h1 class="text-center">Hello <%= @user.firstname %>!</h1>
 
-<a class="btn btn-info" href="/registration/login">Login</a>
+<div class="formCont">
+  <div class="brTop"></div>
+  <div class="inputForm">
+    <p>
+      First Name: <%= @user.firstname %><br/>
+      Last Name: <%= @user.lastname %><br/>
+      Street Address: <%= @user.streetaddr %><br/>
+      City: <%= @user.city %><br/>
+      State: <%= @user.state %><br/>
+      Zipcode: <%= @user.zipcode %><br/>
+      Country: <%= @user.country %><br/>
+      <ul>
+        <% @user.phones.each do |x| %>
+        <li>Phone: <%= x.phonenumber %></li>
+        <% end %>
+      </ul></br>
+      Username: <%= @user.username %><br/>
+      Password: ***********<br/>
+      User Id: <%= @user.id %>
+    </p>
+  </div>
+  <% if cookies[:userid].nil? %>
+    <a class="btn btn-info" href="/registration/login">Login</a>
+  <% end %>
 
-<a class="btn btn-info" href="/registration/logout">Log Out</a>
+  <a class="btn btn-info" href="/registration/logout">Log Out</a>
+</div>

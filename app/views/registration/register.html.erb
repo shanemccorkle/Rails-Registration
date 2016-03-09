@@ -1,35 +1,26 @@
-<h1>Registration Page</h1>
+<h1 class="text-center">Registration Page</h1>
 
 
+<div class="formCont">
+  <div class="brTop"></div>
+  <form action="/registration/login_user" method="post" role="form">
+    <input class="inputForm" type="text" name="firstname" id="firstname" placeholder="First Name"/></br>
+    <input class="inputForm" type="text" name="lastname" id="lastname" placeholder="Last Name"/></br>
+    <input class="inputForm" type="text" name="streetaddr" id="streetaddr" placeholder="Street Address"/></br>
+    <input class="inputForm" type="text" name="city" id="city" placeholder="City"/></br>
+    <input class="inputForm" type="text" name="state" id="state" placeholder="State"/></br>
+    <input class="inputForm" type="text" name="zipcode" id="zipcode" placeholder="Zipcode"/></br>
+    <input class="inputForm" type="text" name="country" id="country" placeholder="Country"/></br>
+    <input class="inputForm" type="text" name="phone1" id="phone1" placeholder="Phone 1"/></br>
+    <input class="inputForm" type="text" name="phone2" id="phone2" placeholder="Phone 2"/></br>
+    <input class="inputForm" type="text" name="phone3" id="phone3" placeholder="Phone 3"/><br/>
+    <br/>
+    <input class="inputForm" type="text" name="username" id="username" placeholder="User Name" required/><%= flash[:notice] %><br/>
+    <input class="inputForm" type="text" name="password" id="password" placeholder="Password" required/><%= flash[:alert] %><br/>
+    <input type="submit" class="btn btn-info" value="Register"/>
+  </form>
+  <div class="triangle"></div>
 
+  <a class="btn btn-info" href="/registration/login">Go To Login</a>
 
-<form action="/registration/register_user" method="post">
-  <label for="firstname">First Name</label>
-  <input type="text" name="firstname" id="firstname"/></br>
-  <label for="lastname">Last Name</label>
-  <input type="text" name="lastname" id="lastname"/></br>
-  <label for="streetaddr">Street Address</label>
-  <input type="text" name="streetaddr" id="streetaddr"/></br>
-  <label for="city">City</label>
-  <input type="text" name="city" id="city"/></br>
-  <label for="state">State</label>
-  <input type="text" name="state" id="state"/></br>
-  <label for="zipcode">Zip Code</label>
-  <input type="text" name="zipcode" id="zipcode"/></br>
-  <label for="country">Country</label>
-  <input type="text" name="country" id="country"/></br>
-  <label for="phone1">Phone Number 1</label>
-  <input type="text" name="phone1" id="phone1"/></br>
-  <label for="phone2">Phone Number 2</label>
-  <input type="text" name="phone2" id="phone2"/></br>
-  <label for="phone3">Phone Number 3</label>
-  <input type="text" name="phone3" id="phone3"/><br/>
-  <br/>
-  <label for="username">User Name</label>
-  <input type="text" name="username" id="username" required/><%= flash[:notice] %><br/>
-  <label for="password">Password</label>
-  <input type="text" name="password" id="password" required/><%= flash[:alert] %><br/>
-  <input type="submit" class="btn btn-info" value="Register"/>
-</form>
-
-<a class="btn btn-info" href="/registration/login">Go To Login</a>
+</div>

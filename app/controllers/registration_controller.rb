@@ -40,7 +40,7 @@ class RegistrationController < ApplicationController
     end
   end
 
-  # add phone to user table
+  # add phone to user table by checking if there is a phone number as a parameter. If not, it saves "No Phone" in the db.
   def add_phone(user, phonenumber)
     phone1 = Phone.new
     !phonenumber.empty? ? phone1.phonenumber = phonenumber : phone1.phonenumber = "No Phone"
@@ -62,7 +62,7 @@ class RegistrationController < ApplicationController
 
   def login_user
     if params.has_key?(:username) && !params[:username].strip.empty? && params.has_key?(:password) && !params[:password].strip.empty?
-      user = User.find_by_username(params[:username])
+      user = User.find_by_username(params[:username].strip)
       if user.nil?
         flash[:alert] = "Log in failed, try again; Wrong Username"
         render 'login'
@@ -71,8 +71,8 @@ class RegistrationController < ApplicationController
           cookies[:userid] = user.id
           redirect_to '/registration/user_info'
         else
-          render 'login'
           flash[:alert] = "Log in failed, try again; Wrong Password"
+          render 'login'
         end
       end
     end

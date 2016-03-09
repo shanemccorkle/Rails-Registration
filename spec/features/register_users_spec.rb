@@ -45,6 +45,17 @@ RSpec.feature "RegisterUsers", type: :feature do
     expect(page).to have_text("No Phone")
   end
 
+  it "can log out" do
+    visit '/'
+    fill_reg_page
+    click_on 'Login'
+    page.fill_in 'User Name', with: 'User111'
+    page.fill_in 'Password', with: 'pass1!!!'
+    click_on 'Login'
+    click_on 'Log Out'
+    expect(page).to have_text("You are now logged out")
+  end
+
   def fill_reg_page
     page.fill_in 'First Name', with: 'Shane'
     page.fill_in 'Last Name', with: 'McCorkle'

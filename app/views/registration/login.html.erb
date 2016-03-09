@@ -1,14 +1,27 @@
-<h1>Login</h1>
+  <h1 class="text-center">Login</h1>
 
-<h3><%= flash[:notice] %></h3>
-<form action="/registration/login_user" method="post">
-  <label for="username">User Name: </label>
-  <input type="text" name="username" id="username" required/><br/>
-  <label for="password">Password: </label>
-  <input type="text" name="password" id="password" required/><br/>
-  <input type="submit" class="btn btn-info" value="Login"/>
-</form>
+<div class="formCont">
+  <div class="brTop"></div>
+  <form action="/registration/login_user" method="post" role="form">
 
-<a class="btn btn-info" href="/">Register</a>
+    <div class="inputForm">
+      <span class="prefix"><span class="entypo-user"></span></span>
+      <input type="text" placeholder="Username" name="username" id="username" required/>
+    </div>
+    <br />
+    <div class="inputForm">
+      <span class="prefix"><span class="entypo-key"></span></span>
+      <input type="password" placeholder="Password" name="password" id="password" required=""/>
+      <span class="sufix"><span class="entypo-lock"></span></span>
+    </div>
+    <br/>
+    <input type="submit" class="btn btn-info" value="Login"/>
+  </form>
+  <div class="triangle"></div>
 
-<h3><%= flash[:alert] %></h3>
+  <a class="btn btn-info" href="/">Go To Register</a>
+
+  <h4><%= flash[:notice] %></h4>
+  <h4><%= flash[:alert] %></h4>
+
+</div>

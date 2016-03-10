@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20160308185354) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password"
+    t.string   "firstname"
+    t.string   "lastname"
     t.string   "streetaddr"
     t.string   "city"
     t.string   "state"
@@ -43,8 +45,6 @@ ActiveRecord::Schema.define(version: 20160308185354) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "firstname"
-    t.string   "lastname"
   end
 
   add_foreign_key "phones", "users"

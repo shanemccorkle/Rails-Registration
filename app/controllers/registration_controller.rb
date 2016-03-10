@@ -30,7 +30,7 @@ class RegistrationController < ApplicationController
         redirect_to '/registration/user_info'
       else
         if !user.nil?
-          flash[:notice] = "User ID taken, try another."
+          flash.now[:notice] = "User ID taken, try another."
         end
         render '/registration/register'
       end

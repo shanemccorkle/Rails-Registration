@@ -34,8 +34,8 @@ RSpec.feature "RegisterUsers", type: :feature do
   it "can log in" do
     visit '/'
     fill_reg_page
-    click_on 'Login'
-    page.fill_in 'User Name', with: 'User111'
+    click_on 'Log Out'
+    page.fill_in 'Username', with: 'User111'
     page.fill_in 'Password', with: 'pass1!!!'
     click_on 'Login'
     expect(page).to have_text("Shane")
@@ -48,8 +48,8 @@ RSpec.feature "RegisterUsers", type: :feature do
   it "can log out" do
     visit '/'
     fill_reg_page
-    click_on 'Login'
-    page.fill_in 'User Name', with: 'User111'
+    click_on 'Log Out'
+    page.fill_in 'Username', with: 'User111'
     page.fill_in 'Password', with: 'pass1!!!'
     click_on 'Login'
     click_on 'Log Out'
@@ -62,11 +62,11 @@ RSpec.feature "RegisterUsers", type: :feature do
     page.fill_in 'Street Address', with: '123 Fake St.'
     page.fill_in 'City', with: 'San Diego'
     page.fill_in 'State', with: 'CA'
-    page.fill_in 'Zip Code', with: '92130'
+    page.fill_in 'Zipcode', with: '92130'
     page.fill_in 'Country', with: 'US'
     page.fill_in 'User Name', with: 'User111'
     page.fill_in 'Password', with: 'pass1!!!'
-    page.fill_in 'Phone Number 1', with: '123-456-7890'
+    page.fill_in 'Phone 1', with: '123-456-7890'
     click_button 'Register'
   end
 

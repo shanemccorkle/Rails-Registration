@@ -3,7 +3,7 @@
 
 <div class="formCont">
   <div class="brTop"></div>
-  <form action="/registration/login_user" method="post" role="form">
+  <form action="/registration/register_user" method="post" role="form">
     <input class="inputForm" type="text" name="firstname" id="firstname" placeholder="First Name"/></br>
     <input class="inputForm" type="text" name="lastname" id="lastname" placeholder="Last Name"/></br>
     <input class="inputForm" type="text" name="streetaddr" id="streetaddr" placeholder="Street Address"/></br>
@@ -15,8 +15,8 @@
     <input class="inputForm" type="text" name="phone2" id="phone2" placeholder="Phone 2"/></br>
     <input class="inputForm" type="text" name="phone3" id="phone3" placeholder="Phone 3"/><br/>
     <br/>
-    <input class="inputForm" type="text" name="username" id="username" placeholder="User Name" required/><%= flash[:notice] %><br/>
-    <input class="inputForm" type="text" name="password" id="password" placeholder="Password" required/><%= flash[:alert] %><br/>
+    <input class="inputForm" type="text" name="username" id="username" placeholder="User Name" required/><span><%= flash[:notice] %></span><br/>
+    <input class="inputForm" type="text" name="password" id="password" placeholder="Password" required/><span><%= flash[:alert] %></span><br/>
     <input type="submit" class="btn btn-info" value="Register"/>
   </form>
   <div class="triangle"></div>

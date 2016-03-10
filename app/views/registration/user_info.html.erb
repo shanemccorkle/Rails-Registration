@@ -3,6 +3,7 @@
 <div class="formCont">
   <div class="brTop"></div>
   <div class="form">
+    <!-- variable @user is user record retriving from user table using userid saved in a cookie -->
     <p>
       First Name: <%= @user.firstname %><br/>
       Last Name: <%= @user.lastname %><br/>
@@ -11,6 +12,7 @@
       State: <%= @user.state %><br/>
       Zipcode: <%= @user.zipcode %><br/>
       Country: <%= @user.country %><br/>
+      <!-- loop through each phone in user to print out phone number -->
       <ul>
         <% @user.phones.each do |x| %>
         <li>Phone: <%= x.phonenumber %></li>
@@ -21,7 +23,7 @@
       User Id: <%= @user.id %>
     </p>
   </div>
-  
+
   <% if cookies[:userid].nil? %>
     <a class="btn btn-info" href="/registration/login">Login</a>
   <% end %>

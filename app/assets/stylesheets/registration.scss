@@ -7,6 +7,7 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
 
+
 /* zocial */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
@@ -27,6 +28,9 @@ $form: #2c3e50;
 $presufix: #dedee0;
 $presufixFont : #777777;
 
+h1 {
+  font-family: 'Maven Pro', sans-serif;
+}
 
 
 body {
@@ -50,6 +54,15 @@ h2 {
 form{
   background: $form;
   padding: 20px;
+}
+
+.form{
+  background: $form;
+  padding: 20px;
+  color: white;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 input {

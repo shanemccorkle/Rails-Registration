@@ -2,7 +2,7 @@
 
 <div class="formCont">
   <div class="brTop"></div>
-  <div class="inputForm">
+  <div class="form">
     <p>
       First Name: <%= @user.firstname %><br/>
       Last Name: <%= @user.lastname %><br/>
@@ -21,6 +21,7 @@
       User Id: <%= @user.id %>
     </p>
   </div>
+  
   <% if cookies[:userid].nil? %>
     <a class="btn btn-info" href="/registration/login">Login</a>
   <% end %>

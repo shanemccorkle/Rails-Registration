@@ -66,6 +66,7 @@ class RegistrationController < ApplicationController
       if user.nil?
         flash[:alert] = "Log in failed, try again; Wrong Username"
         render 'login'
+        flash[:alert] = ""
       else
         if user.password == params[:password]
           cookies[:userid] = user.id
@@ -73,6 +74,7 @@ class RegistrationController < ApplicationController
         else
           flash[:alert] = "Log in failed, try again; Wrong Password"
           render 'login'
+          flash[:alert] = ""
         end
       end
     end
